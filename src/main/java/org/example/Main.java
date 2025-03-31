@@ -148,6 +148,10 @@ public class Main extends Application {
 
     private TableView<Remedio> criarTabelaRemedios() {
         TableView<Remedio> table = new TableView<>(filteredRemedios);
+
+        // 1) Ativar a redimensionamento automático:
+        table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
         table.setEditable(true);
         table.setPrefHeight(300);
 
@@ -184,7 +188,7 @@ public class Main extends Application {
         colDataHora.setPrefWidth(160);
 
         TableColumn<Remedio, Void> colAcoes = new TableColumn<>("Ações");
-        colAcoes.setPrefWidth(100);
+        colAcoes.setPrefWidth(150);
         colAcoes.setCellFactory(param -> new TableCell<>() {
             private final Button btnRemover = new Button("Remover");
             private final Button btnEditar = new Button("Editar");
