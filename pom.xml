@@ -37,7 +37,11 @@
             <version>${javafx.version}</version>
             <classifier>${javafx.platform}</classifier>
         </dependency>
-        <!-- Outros módulos, se necessário -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version> <!-- Ou outra versão disponível no Maven Central -->
+        </dependency>
     </dependencies>
 
     <build>
